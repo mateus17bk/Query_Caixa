@@ -1,0 +1,11 @@
+DELETE FROM campanha_usuario 
+WHERE Campanha_id = <Id_unidade> 
+AND usuarios_id IN (
+    SELECT u.id
+    FROM usuario u 
+    WHERE u.nivel = <Nivel> 
+    AND u.email IN (
+        'C123606'
+    
+    )
+)
